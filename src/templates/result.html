@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personalized Diet & Disease Recommendation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f4f6f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      max-width: 900px;
+      margin-top: 60px;
+    }
+    .result-box {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      color: #333333;
+    }
+    p, li {
+      font-size: 1.1rem;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #0d6efd;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="result-box">
+      <h1>Hi {{ name }} 👋</h1>
+
+      <h2>Disease Prediction: {{ disease }}</h2>
+      <p><strong>Diet:</strong> {{ diet }}</p>
+
+      <p><strong>Exercise:</strong> {{ exercise }}</p>
+
+      <h3>Your Input Values:</h3>
+        <ul>
+          <li>Calories (Entered): {{ input_cal }} kcal</li>
+          <li>Protein (Entered): {{ input_prot }} g</li>
+          <li>Fat (Entered): {{ input_fat }} g</li>
+          <li>Carbohydrates (Entered): {{ input_carb }} g</li>
+        </ul>
+
+      <h3>Smart Diet Category: {{ smart_diet }}</h3>
+      <p><strong>Meal Plan:</strong> {{ meal_plan }}</p>
+      <p>{{ description }}</p>
+
+      <h3>Recommended Nutrition Targets:</h3>
+      <ul>
+        <li>Calories: {{ target_cal }} kcal</li>
+        <li>Protein: {{ target_prot }} g</li>
+        <li>Fat: {{ target_fat }} g</li>
+        <li>Carbohydrates: {{ target_carb }} g</li>
+      </ul>
+
+      <a class="back-link" href="/">&larr; Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
